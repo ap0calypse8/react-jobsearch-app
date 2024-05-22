@@ -38,11 +38,11 @@ useEffect(() => {
         headers: {
             'X-RapidAPI-Key': '008e06e88dmshd0aed1084439b6dp1ebf16jsnde460374e045',
             'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
-          }
-      })
+        }
+    })
     
     .then(res =>{
-        dispatch({type: ACTION.GET_DATA, payload: {jobs: res.data.results} })
+        dispatch({type: ACTION.GET_DATA, payload: {jobs: res.data.data} })
 })
 
 .catch(e=> {
